@@ -1,0 +1,24 @@
+:root {
+    /* COLORS */
+    --color-background: #08080a;
+    --color-surface: #0d0d10;
+  
+    --color-text: #f5f5f7;
+    --color-text-muted: rgba(245, 245, 247, 0.5);
+  
+    --color-accent: #aa3bff;
+  
+    --color-border: rgba(255, 255, 255, 0.08);
+  
+    /* LAYOUT */
+    --container-width: 1440px;
+  
+    /* TYPOGRAPHY */
+    --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
+    --font-heading: system-ui, "Segoe UI", Roboto, sans-serif;
+    --font-mono: ui-monospace, Consolas, monospace;
+  
+    /* TRANSITIONS */
+    --transition-fast: 220ms ease;
+    --transition-medium: 300ms ease;
+}

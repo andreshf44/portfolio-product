@@ -1,0 +1,273 @@
+.about {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: clip;
+  
+    padding: 150px 32px 170px;
+  
+    background: #f1f0ec;
+    color: #111114;
+  }
+  
+  .about__container {
+    width: min(100%, var(--container-width));
+    margin: 0 auto;
+  }
+  
+  /* EYEBROW */
+  
+  .about__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  
+    margin-bottom: 60px;
+  
+    color: rgba(17, 17, 20, 0.4);
+  
+    font-family: var(--font-mono);
+    font-size: 8px;
+  
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  
+  .about__eyebrow > span:first-child {
+    color: var(--color-accent);
+  }
+  
+  .about__eyebrow-line {
+    width: 32px;
+    height: 1px;
+  
+    background: rgba(17, 17, 20, 0.18);
+  }
+  
+  /* MAIN */
+  
+  .about__layout {
+    display: grid;
+  
+    grid-template-columns:
+      minmax(0, 1.15fr)
+      minmax(280px, 0.45fr);
+  
+    gap: clamp(60px, 9vw, 140px);
+  
+    align-items: end;
+  
+    margin-bottom: 120px;
+  }
+  
+  .about__intro h2 {
+    max-width: 900px;
+  
+    margin: 0;
+  
+    font-size: clamp(52px, 6.5vw, 96px);
+    font-weight: 500;
+  
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+  
+    color: #111114;
+  }
+  
+  .about__intro h2 span {
+    color: var(--color-accent);
+  }
+  
+  .about__intro > p {
+    max-width: 650px;
+  
+    margin-top: 36px;
+  
+    color: rgba(17, 17, 20, 0.5);
+  
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  
+  /* PROFILE */
+  
+  .about__profile {
+    padding: 26px;
+  
+    border: 1px solid rgba(17, 17, 20, 0.12);
+    border-radius: 22px;
+  
+    background: rgba(255, 255, 255, 0.28);
+  }
+  
+  .about__profile-label {
+    display: block;
+  
+    margin-bottom: 26px;
+  
+    color: rgba(17, 17, 20, 0.26);
+  
+    font-family: var(--font-mono);
+    font-size: 7px;
+  
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  
+  .about__profile-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  
+    padding: 16px 0;
+  
+    border-top: 1px solid rgba(17, 17, 20, 0.1);
+  }
+  
+  .about__profile-row span {
+    color: rgba(17, 17, 20, 0.3);
+  
+    font-family: var(--font-mono);
+    font-size: 7px;
+  
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  
+  .about__profile-row strong {
+    color: rgba(17, 17, 20, 0.7);
+  
+    font-size: 10px;
+    font-weight: 500;
+  
+    text-align: right;
+  }
+  
+  /* PRINCIPLES */
+  
+  .about__principles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    border-top: 1px solid rgba(17, 17, 20, 0.14);
+  }
+  
+  .about__principle {
+    position: relative;
+  
+    min-height: 300px;
+  
+    padding: 38px 36px 40px 0;
+  
+    border-right: 1px solid rgba(17, 17, 20, 0.12);
+  }
+  
+  .about__principle:not(:first-child) {
+    padding-left: 36px;
+  }
+  
+  .about__principle:last-child {
+    border-right: none;
+  }
+  
+  .about__principle-index {
+    display: block;
+  
+    margin-bottom: 60px;
+  
+    color: rgba(17, 17, 20, 0.25);
+  
+    font-family: var(--font-mono);
+    font-size: 8px;
+  
+    letter-spacing: 0.12em;
+  }
+  
+  .about__principle h3 {
+    margin: 0;
+  
+    color: #111114;
+  
+    font-size: clamp(24px, 2.2vw, 34px);
+    font-weight: 500;
+  
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+  
+  .about__principle p {
+    max-width: 360px;
+  
+    margin-top: 18px;
+  
+    color: rgba(17, 17, 20, 0.46);
+  
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 950px) {
+    .about__layout {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  
+    .about__profile {
+      max-width: 520px;
+    }
+  
+    .about__principles {
+      grid-template-columns: 1fr;
+    }
+  
+    .about__principle {
+      min-height: auto;
+  
+      padding: 40px 0;
+  
+      border-right: none;
+      border-bottom: 1px solid rgba(17, 17, 20, 0.12);
+    }
+  
+    .about__principle:not(:first-child) {
+      padding-left: 0;
+    }
+  
+    .about__principle-index {
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .about {
+      padding: 110px 20px 120px;
+    }
+  
+    .about__eyebrow {
+      margin-bottom: 40px;
+    }
+  
+    .about__layout {
+      margin-bottom: 80px;
+    }
+  
+    .about__intro h2 {
+      font-size: clamp(46px, 14vw, 68px);
+    }
+  
+    .about__intro > p {
+      margin-top: 28px;
+  
+      font-size: 14px;
+    }
+  
+    .about__profile {
+      padding: 20px;
+    }
+  
+    .about__profile-row {
+      gap: 20px;
+    }
+  }
