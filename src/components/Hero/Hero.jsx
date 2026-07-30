@@ -1,6 +1,41 @@
-import { motion } from "framer-motion";
-import heroImg from "../../assets/images/hero.png";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+import haikuImg from "../../assets/images/projects/haiku.png";
+import goFlyImg from "../../assets/images/projects/go-fly-fishing.png";
+import weghausImg from "../../assets/images/projects/weghaus.png";
+
 import "./Hero.css";
+
+const projects = [
+  {
+    id: "01",
+    name: "Haiku",
+    image: haikuImg,
+    role: "Design + Front-end",
+    stack: "Next.js · React · UI",
+    tag: "Hospitality experience",
+    alt: "Sitio web Haiku desarrollado por Andrés Herrera",
+  },
+  {
+    id: "02",
+    name: "Go Fly Fishing",
+    image: goFlyImg,
+    role: "Design + Development",
+    stack: "UX/UI · Responsive · Wix",
+    tag: "Outdoor experience",
+    alt: "Sitio web Go Fly Fishing desarrollado por Andrés Herrera",
+  },
+  {
+    id: "03",
+    name: "Weghaus",
+    image: weghausImg,
+    role: "Front-end Development",
+    stack: "Dynamic UI · State · Forms",
+    tag: "Interactive configurator",
+    alt: "Interfaz Weghaus desarrollada por Andrés Herrera",
+  },
+];
 
 const textContainer = {
   hidden: {},
@@ -28,6 +63,18 @@ const textItem = {
 };
 
 function Hero() {
+  const [activeProject, setActiveProject] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveProject((current) => (current + 1) % projects.length);
+    }, 5500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const project = projects[activeProject];
+
   return (
     <section className="hero" id="home">
       <div className="hero__background" aria-hidden="true">
@@ -110,7 +157,13 @@ function Hero() {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <span className="hero__visual-index">01 / 04</span>
+          <div className="hero__visual-heading">
+            <span>
+              {project.id} / {String(projects.length).padStart(2, "0")}
+            </span>
+
+            <span>Selected work</span>
+          </div>
 
           <div className="hero__frame">
             <div className="hero__frame-top">
@@ -120,63 +173,122 @@ function Hero() {
                 <span />
               </div>
 
-              <span>Selected interface · 2026</span>
+              <span>{project.name} · Selected project</span>
             </div>
 
             <div className="hero__image-wrapper">
-              <img
-                className="hero__image"
-                src={heroImg}
-                alt="Vista de una interfaz digital desarrollada por Andrés Herrera"
-              />
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={project.id}
+                  className="hero__image"
+                  src={project.image}
+                  alt={project.alt}
+                  initial={{
+                    opacity: 0,
+                    scale: 1.04,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    scale: 0.985,
+                  }}
+                  transition={{
+                    duration: 0.75,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                />
+              </AnimatePresence>
 
               <div className="hero__image-overlay" />
 
-              <div className="hero__image-tag">
+              <motion.div
+                key={`tag-${project.id}`}
+                className="hero__image-tag"
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: 0.15 }}
+              >
                 <span className="hero__image-tag-dot" />
-                <span>Interface in development</span>
-              </div>
+                <span>{project.tag}</span>
+              </motion.div>
 
-              <div className="hero__image-number" aria-hidden="true">
-                01
+              <div className="hero__image-project">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={`project-${project.id}`}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{
+                      duration: 0.55,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                  >
+                    <span>Selected work</span>
+                    <strong>{project.name}</strong>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
 
             <div className="hero__frame-footer">
-              <div>
-                <span className="hero__frame-label">Focus</span>
-                <strong>Product interface</strong>
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`role-${project.id}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.35 }}
+                >
+                  <span className="hero__frame-label">Role</span>
+                  <strong>{project.role}</strong>
+                </motion.div>
+              </AnimatePresence>
 
-              <div>
-                <span className="hero__frame-label">Stack</span>
-                <strong>React · CSS · Motion</strong>
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`stack-${project.id}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.35 }}
+                >
+                  <span className="hero__frame-label">Stack / Focus</span>
+                  <strong>{project.stack}</strong>
+                </motion.div>
+              </AnimatePresence>
 
-              <span className="hero__frame-arrow" aria-hidden="true">
+              <a
+                href="#projects"
+                className="hero__frame-arrow"
+                aria-label={`Ver proyecto ${project.name}`}
+              >
                 ↗
-              </span>
+              </a>
             </div>
           </div>
 
-          <motion.div
-            className="hero__floating-card"
-            animate={{
-              y: [0, -8, 0],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            <span className="hero__floating-label">Current status</span>
-
-            <div className="hero__floating-status">
-              <span />
-              Available for selected projects
-            </div>
-          </motion.div>
+          <div className="hero__project-nav">
+            {projects.map((item, index) => (
+              <button
+                key={item.id}
+                type="button"
+                className={`hero__project-dot ${
+                  index === activeProject
+                    ? "hero__project-dot--active"
+                    : ""
+                }`}
+                onClick={() => setActiveProject(index)}
+                aria-label={`Mostrar ${item.name}`}
+              >
+                <span>{item.id}</span>
+                <span className="hero__project-progress" />
+              </button>
+            ))}
+          </div>
         </motion.div>
       </div>
 
@@ -190,6 +302,7 @@ function Hero() {
         }}
       >
         <span>Scroll para explorar</span>
+
         <span className="hero__scroll-track">
           <span />
         </span>
