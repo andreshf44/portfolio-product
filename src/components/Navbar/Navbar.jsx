@@ -22,11 +22,42 @@ function Navbar() {
     >
       <div className="navbar__container">
         <a className="navbar__brand" href="#home" aria-label="Ir al inicio">
-          <span className="navbar__brand-mark">
-            <span>A</span>
-            <span className="navbar__brand-point">.</span>
-            <span>H</span>
-          </span>
+        <span className="navbar__brand-mark" aria-hidden="true">
+  <svg
+    className="navbar__brand-logo"
+    viewBox="0 0 64 48"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* A */}
+    <path
+      d="M10 38L25 10L34 38"
+      className="navbar__logo-stroke"
+    />
+
+    {/* travesaño / conexión */}
+    <path
+      d="M18 28H40"
+      className="navbar__logo-stroke"
+    />
+
+    {/* H */}
+    <path
+      d="M40 12V38"
+      className="navbar__logo-stroke"
+    />
+
+    <path
+      d="M52 12V38"
+      className="navbar__logo-stroke"
+    />
+
+    <path
+      d="M40 26H52"
+      className="navbar__logo-accent"
+    />
+  </svg>
+</span>
 
           <span className="navbar__brand-copy">
             <span>Andrés Herrera</span>

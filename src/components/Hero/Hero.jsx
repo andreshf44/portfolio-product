@@ -127,7 +127,7 @@ function Hero() {
           <motion.div className="hero__meta" variants={textItem}>
             <div className="hero__meta-item">
               <span className="hero__meta-label">Especialidad</span>
-              <span>React · UI systems · Motion</span>
+              <span>React · Ruby on Rails · Web Apps · Product UI</span>
             </div>
 
             <div className="hero__meta-divider" />
