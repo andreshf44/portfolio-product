@@ -247,15 +247,15 @@ function Projects() {
                     </div>
                   )}
 
-<a
-  className="project__open"
-  href={project.url}
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label={`Ver proyecto ${project.company}`}
->
-  ↗
-</a>
+                  <a
+                    className="project__open"
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ver proyecto ${project.company}`}
+                  >
+                    ↗
+                  </a>
                   
                 </div>
               </div>
