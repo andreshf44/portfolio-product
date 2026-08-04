@@ -3,16 +3,18 @@ import { motion } from "framer-motion";
 import haikuImg from "../../assets/images/projects/haiku.png";
 import goFlyImg from "../../assets/images/projects/go-fly-fishing.png";
 import weghausImg from "../../assets/images/projects/weghaus.png";
+import ied from "../../assets/images/projects/ied.png"
+import tactoSur from "../../assets/images/projects/tacto-sur.png"
 
 import "./Projects.css";
 
 const projects = [
   {
     id: "01",
-    company: "IDOK · FirmaYa",
-    title: "Firma y gestión documental",
+    company: "BeTrust",
+    title: "Plataforma de firma electrónica",
     description:
-      "Desarrollo y evolución de interfaces para una aplicación web de firma y gestión documental, trabajando sobre flujos de producto, administración de usuarios y distintas experiencias según perfiles y estados del sistema.",
+      "Desarrollo y evolución de interfaces para una plataforma de firma electrónica y gestión documental, participando en flujos de producto, administración de usuarios y experiencias adaptadas a distintos perfiles del sistema.",
     tags: [
       "Web App",
       "Ruby on Rails",
@@ -31,36 +33,59 @@ const projects = [
     company: "Haiku",
     title: "Experiencia digital para alojamientos",
     description:
-      "Diseño e implementación de una experiencia web enfocada en descubrir alojamientos, explorar sus características y facilitar el proceso de reserva.",
-    tags: ["Next.js", "React", "UI", "Motion"],
+      "Diseño y desarrollo de una plataforma web para un proyecto de hospedaje boutique, enfocada en descubrir alojamientos, explorar experiencias y facilitar el proceso de reserva mediante una interfaz inmersiva, responsive y bilingüe.",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Responsive UI",
+      "Multilingual",
+      "UX/UI",
+    ],
     type: "Hospitality",
     year: "2026",
-    role: "Design + Front-end",
+    role: "Design & Front-end Developer",
     url: "https://haiku-web.vercel.app/",
     image: haikuImg,
   },
   {
     id: "03",
     company: "Go Fly Fishing",
-    title: "Experiencias de pesca en el sur de Chile",
+    title: "Plataforma web para turismo de pesca",
     description:
-      "Diseño y desarrollo de una experiencia web bilingüe orientada a presentar excursiones, servicios y pesca con mosca en Pucón.",
-    tags: ["UX/UI", "Responsive", "Wix", "Multilingual"],
-    type: "Tourism Experience",
+      "Diseño y desarrollo de una plataforma web bilingüe para una empresa de pesca con mosca en Pucón, enfocada en presentar experiencias, optimizar la visibilidad online y facilitar el contacto con clientes nacionales e internacionales.",
+    tags: [
+      "Wix",
+      "Responsive UI",
+      "SEO",
+      "Multilingual",
+      "UX/UI",
+      "Web Design",
+    ],
+    type: "Tourism Platform",
     year: "2026",
-    role: "Design + Development",
+    role: "Design & Development",
+    url: "https://www.goflyfishing.cl/",
     image: goFlyImg,
   },
   {
     id: "04",
     company: "Weghaus",
-    title: "Configuración interactiva de producto",
+    title: "Configurador interactivo de productos",
     description:
-      "Desarrollo de lógica frontend para selección de opciones, persistencia de estado, imágenes condicionales, resumen dinámico e integración con formularios.",
-    tags: ["State", "Dynamic UI", "Forms", "Conditional Logic"],
-    type: "Web Application",
+      "Desarrollo de funcionalidades frontend para un configurador de productos, implementando selección dinámica de opciones, manejo de estados, actualización de imágenes en tiempo real, persistencia de configuraciones e integración con formularios.",
+    tags: [
+      "JavaScript",
+      "State Management",
+      "Dynamic UI",
+      "Forms",
+      "Wix",
+      "Responsive UI",
+    ],
+    type: "Product Configurator",
     year: "2026",
-    role: "Front-end Development",
+    role: "Front-end Developer",
+    url: "https://www.weghaus.cl/",
     image: weghausImg,
   },
   {
@@ -68,42 +93,40 @@ const projects = [
     company: "iED Global",
     title: "Plataforma digital para educación",
     description:
-      "Trabajo frontend sobre una experiencia digital orientada a soluciones de educación, capacitación y servicios para organizaciones.",
-    tags: ["Front-end", "Responsive UI", "EdTech"],
-    type: "EdTech",
+      "Implementación frontend en React a partir de un diseño existente, desarrollando funcionalidades, flujos de navegación e interacción para garantizar una experiencia consistente y el correcto funcionamiento de la plataforma.",
+    tags: [
+      "React",
+      "JavaScript",
+      "Front-end",
+      "Responsive UI",
+      "EdTech",
+      "UI Implementation",
+    ],
+    type: "EdTech Platform",
     year: "2025",
-    role: "Front-end Development",
-    image: null,
+    role: "Front-end Developer",
+    url: "https://i-edglobal.com/",
+    image: ied,
   },
   {
     id: "06",
     company: "Tacto Sur",
-    title: "Plataforma cultural independiente",
+    title: "Plataforma cultural para artes escénicas",
     description:
-      "Desarrollo de una plataforma web para una organización de artes escénicas del sur de Chile, enfocada en contenido, comunidad y suscripción.",
-    tags: ["Web Development", "Responsive", "Culture"],
+      "Diseño y desarrollo de una plataforma web para una organización de artes escénicas, implementando una experiencia responsive, gestión de contenido e integración con Mercado Pago para el proceso de suscripción.",
+    tags: [
+      "React",
+      "UX/UI",
+      "Responsive UI",
+      "Mercado Pago",
+      "JavaScript",
+      "Web Design",
+    ],
     type: "Cultural Platform",
     year: "2025",
-    role: "Web Development",
-    image: null,
-  },
-  {
-    id: "07",
-    company: "WebClass",
-    title: "Experiencias digitales para educación",
-    description:
-      "Desarrollo y optimización de interfaces para productos educativos, trabajando en la evolución de componentes, templates y funcionalidades orientadas a mejorar la experiencia de uso dentro de la plataforma.",
-    tags: [
-      "Vue.js",
-      "JavaScript",
-      "HTML",
-      "PHP",
-      "EdTech",
-    ],
-    type: "Producto EdTech",
-    year: "2023 — 2024",
-    role: "Front-end Developer",
-    image: null,
+    role: "Design & Front-end Developer",
+    url: "https://tactosur.com/",
+    image: tactoSur,
   },
 ];
 
@@ -159,8 +182,9 @@ function Projects() {
             </h2>
 
             <p>
-              Una selección de aplicaciones, productos y experiencias digitales
-              donde desarrollo, producto e interfaz se encuentran.
+            Una selección de aplicaciones, productos y experiencias 
+            digitales donde estrategia, diseño y desarrollo se integran 
+            para construir mejores productos.
             </p>
           </div>
         </motion.header>

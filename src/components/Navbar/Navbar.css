@@ -1,65 +1,92 @@
+/* =========================================================
+   NAVBAR
+========================================================= */
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
+
   z-index: 50;
+
   width: 100%;
+
   padding: 14px 24px;
+
   pointer-events: none;
 }
 
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
 .navbar__container {
   display: grid;
-  grid-template-columns: minmax(190px, 1fr) auto minmax(190px, 1fr);
+
+  grid-template-columns:
+    minmax(220px, 1fr)
+    auto
+    minmax(220px, 1fr);
+
   align-items: center;
 
   width: min(100%, var(--container-width));
-  min-height: 56px;
+  min-height: 62px;
 
-  margin: 0 auto;
-  padding: 7px 10px 7px 12px;
+  margin-inline: auto;
 
-  border: 1px solid rgba(255, 255, 255, 0.055);
+  padding: 9px 13px 9px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.075);
   border-radius: 999px;
 
-  background: rgba(8, 8, 10, 0.52);
+  background: rgba(8, 8, 10, 0.68);
 
   box-shadow:
-    0 12px 34px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+    0 16px 44px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
 
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
   pointer-events: auto;
 }
 
-/* -----------------------------
-   Brand
------------------------------ */
+
+/* =========================================================
+   BRAND
+========================================================= */
 
 .navbar__brand {
   display: inline-flex;
   align-items: center;
+
   justify-self: start;
 
-  gap: 10px;
+  gap: 12px;
 
   color: var(--color-text);
+
   text-decoration: none;
 }
+
+
+/* Logo container */
 
 .navbar__brand-mark {
   display: grid;
   place-items: center;
 
-  width: 44px;
-  height: 36px;
+  width: 48px;
+  height: 40px;
 
-  border: 1px solid rgba(255, 255, 255, 0.075);
+  flex: 0 0 auto;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 14px;
 
-  background: rgba(255, 255, 255, 0.018);
+  background: rgba(255, 255, 255, 0.025);
 
   transition:
     transform 300ms ease,
@@ -68,86 +95,110 @@
     box-shadow 300ms ease;
 }
 
+
+/* SVG */
+
 .navbar__brand-logo {
-  width: 27px;
+  width: 30px;
   height: auto;
 
   overflow: visible;
 }
 
+
+/* Main logo strokes */
+
 .navbar__logo-stroke {
-  stroke: rgba(245, 245, 247, 0.88);
+  stroke: rgba(245, 245, 247, 0.94);
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
 
-  transition:
-    stroke 300ms ease,
-    transform 300ms ease;
+  transition: stroke 300ms ease;
 }
+
+
+/* Violet detail */
 
 .navbar__logo-accent {
   stroke: var(--color-accent);
   stroke-width: 3;
   stroke-linecap: round;
 
-  filter: drop-shadow(
-    0 0 4px rgba(170, 59, 255, 0.55)
-  );
+  filter:
+    drop-shadow(
+      0 0 5px rgba(170, 59, 255, 0.65)
+    );
 }
+
+
+/* Brand copy */
 
 .navbar__brand-copy {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+
+  gap: 3px;
 }
 
 .navbar__brand-copy > span {
-  color: rgba(245, 245, 247, 0.72);
+  color: rgba(245, 245, 247, 0.9);
 
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1.1;
   letter-spacing: -0.01em;
 }
 
 .navbar__brand-copy small {
-  color: rgba(245, 245, 247, 0.22);
+  color: rgba(245, 245, 247, 0.42);
 
   font-family: var(--font-mono);
   font-size: 9px;
   font-weight: 400;
 
-  letter-spacing: 0.16em;
+  line-height: 1.2;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
+
+/* Brand hover */
+
 .navbar__brand:hover .navbar__brand-mark {
-  transform: translateY(-1px) rotate(-2deg);
+  transform:
+    translateY(-1px)
+    rotate(-2deg);
 
-  border-color: rgba(170, 59, 255, 0.34);
+  border-color: rgba(170, 59, 255, 0.4);
 
-  background: rgba(170, 59, 255, 0.045);
+  background: rgba(170, 59, 255, 0.06);
 
   box-shadow:
-    0 8px 26px rgba(0, 0, 0, 0.24),
-    0 0 18px rgba(170, 59, 255, 0.05);
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(170, 59, 255, 0.08);
 }
 
 .navbar__brand:hover .navbar__logo-stroke {
   stroke: #ffffff;
 }
 
-/* -----------------------------
-   Navigation
------------------------------ */
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 .navbar__nav {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  gap: 2px;
+  gap: 4px;
 }
+
+
+/* Link */
 
 .navbar__link {
   position: relative;
@@ -155,18 +206,18 @@
   display: flex;
   align-items: center;
 
-  gap: 6px;
+  gap: 7px;
 
-  min-height: 32px;
+  min-height: 38px;
 
-  padding: 0 16px;
+  padding-inline: 16px;
 
   border-radius: 999px;
 
-  color: rgba(245, 245, 247, 0.4);
+  color: rgba(245, 245, 247, 0.56);
 
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 500;
 
   text-decoration: none;
 
@@ -176,8 +227,11 @@
     transform 220ms ease;
 }
 
+
+/* Link number */
+
 .navbar__link-index {
-  color: rgba(245, 245, 247, 0.13);
+  color: rgba(245, 245, 247, 0.28);
 
   font-family: var(--font-mono);
   font-size: 8px;
@@ -187,37 +241,44 @@
   transition: color 220ms ease;
 }
 
+
+/* Animated underline */
+
 .navbar__link::after {
   content: "";
 
   position: absolute;
 
-  right: 11px;
+  right: 14px;
   bottom: 4px;
-  left: 11px;
+  left: 14px;
 
   height: 1px;
 
   background: var(--color-accent);
 
+  opacity: 0.8;
+
   transform: scaleX(0);
   transform-origin: right;
 
-  opacity: 0.7;
-
-  transition: transform 280ms ease;
+  transition:
+    transform 280ms ease;
 }
 
-.navbar__link:hover {
-  color: rgba(245, 245, 247, 0.82);
 
-  background: rgba(255, 255, 255, 0.02);
+/* Link hover */
+
+.navbar__link:hover {
+  color: rgba(245, 245, 247, 0.96);
+
+  background: rgba(255, 255, 255, 0.04);
 
   transform: translateY(-1px);
 }
 
 .navbar__link:hover .navbar__link-index {
-  color: rgba(255, 107, 87, 0.7);
+  color: var(--color-accent);
 }
 
 .navbar__link:hover::after {
@@ -225,32 +286,34 @@
   transform-origin: left;
 }
 
-/* -----------------------------
+
+/* =========================================================
    CTA
------------------------------ */
+========================================================= */
 
 .navbar__cta {
   display: inline-flex;
   align-items: center;
+
   justify-self: end;
 
-  gap: 7px;
+  gap: 9px;
 
-  min-height: 32px;
+  min-height: 38px;
 
-  padding: 0 12px;
+  padding-inline: 15px;
 
-  border: 1px solid rgba(255, 255, 255, 0.075);
+  border: 1px solid rgba(255, 255, 255, 0.11);
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.018);
+  background: rgba(255, 255, 255, 0.025);
 
-  color: rgba(245, 245, 247, 0.62);
+  color: rgba(245, 245, 247, 0.84);
 
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
 
-  letter-spacing: 0.015em;
+  letter-spacing: 0.01em;
 
   text-decoration: none;
 
@@ -258,48 +321,81 @@
     transform 260ms ease,
     border-color 260ms ease,
     background-color 260ms ease,
-    color 260ms ease;
+    color 260ms ease,
+    box-shadow 260ms ease;
 }
 
+
+/* Available status */
+
 .navbar__cta-status {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
+
+  flex: 0 0 auto;
 
   border-radius: 50%;
 
   background: #7bdd9c;
 
-  box-shadow: 0 0 9px rgba(123, 221, 156, 0.45);
+  box-shadow:
+    0 0 10px rgba(123, 221, 156, 0.55);
 }
 
-.navbar__cta-arrow {
-  color: rgba(255, 107, 87, 0.72);
 
-  font-size: 10px;
+/* Arrow */
+
+.navbar__cta-arrow {
+  color: var(--color-accent);
+
+  font-size: 12px;
 
   transition: transform 260ms ease;
 }
 
+
+/* CTA hover */
+
 .navbar__cta:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 
-  border-color: rgba(255, 107, 87, 0.25);
-  background: rgba(255, 107, 87, 0.035);
+  border-color: rgba(170, 59, 255, 0.4);
 
-  color: rgba(245, 245, 247, 0.88);
+  background: rgba(170, 59, 255, 0.07);
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.24),
+    0 0 18px rgba(170, 59, 255, 0.06);
 }
 
 .navbar__cta:hover .navbar__cta-arrow {
   transform: translate(2px, -2px);
 }
 
-/* -----------------------------
-   Responsive
------------------------------ */
+
+/* =========================================================
+   KEYBOARD ACCESSIBILITY
+========================================================= */
+
+.navbar__brand:focus-visible,
+.navbar__link:focus-visible,
+.navbar__cta:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   MEDIUM DESKTOP / TABLET
+========================================================= */
 
 @media (max-width: 1050px) {
   .navbar__container {
-    grid-template-columns: 1fr auto;
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto;
   }
 
   .navbar__nav {
@@ -307,14 +403,20 @@
   }
 }
 
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 700px) {
   .navbar {
     padding: 10px 12px;
   }
 
   .navbar__container {
-    min-height: 50px;
-    padding: 6px 8px 6px 10px;
+    min-height: 54px;
+
+    padding: 7px 9px 7px 10px;
   }
 
   .navbar__brand-copy {
@@ -322,14 +424,22 @@
   }
 
   .navbar__brand-mark {
-    min-width: 36px;
-    height: 30px;
-    line-height: 28px;
+    width: 40px;
+    height: 34px;
+
+    border-radius: 12px;
+  }
+
+  .navbar__brand-logo {
+    width: 26px;
   }
 
   .navbar__cta {
-    min-height: 30px;
-    padding: 0 10px;
+    min-height: 34px;
+
+    padding-inline: 12px;
+
+    font-size: 12px;
   }
 
   .navbar__cta-status {
@@ -337,8 +447,44 @@
   }
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 420px) {
+  .navbar {
+    padding-inline: 8px;
+  }
+
+  .navbar__container {
+    padding-right: 7px;
+  }
+
+  .navbar__cta {
+    gap: 6px;
+
+    padding-inline: 11px;
+  }
+
   .navbar__cta-arrow {
     display: none;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar__brand-mark,
+  .navbar__logo-stroke,
+  .navbar__link,
+  .navbar__link-index,
+  .navbar__link::after,
+  .navbar__cta,
+  .navbar__cta-arrow {
+    transition: none;
   }
 }

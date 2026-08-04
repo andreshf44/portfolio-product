@@ -127,14 +127,14 @@ function Hero() {
           <motion.div className="hero__meta" variants={textItem}>
             <div className="hero__meta-item">
               <span className="hero__meta-label">Especialidad</span>
-              <span>React · Ruby on Rails · Web Apps · Product UI</span>
+              <span>React · Ruby on Rails · Web Applications · Product UI</span>
             </div>
 
             <div className="hero__meta-divider" />
 
             <div className="hero__meta-item">
-              <span className="hero__meta-label">Base</span>
-              <span>Pucón · Chile</span>
+              <span className="hero__meta-label">Experiencia</span>
+              <span>Productos digitales · SaaS · Plataformas web</span>
             </div>
           </motion.div>
         </motion.div>
@@ -166,15 +166,6 @@ function Hero() {
           </div>
 
           <div className="hero__frame">
-            <div className="hero__frame-top">
-              <div className="hero__frame-dots" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-              </div>
-
-              <span>{project.name} · Selected project</span>
-            </div>
 
             <div className="hero__image-wrapper">
               <AnimatePresence mode="wait">
