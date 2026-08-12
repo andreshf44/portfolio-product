@@ -19,6 +19,19 @@ const principles = [
   },
 ];
 
+const education = [
+  {
+    degree: "Ingeniería en Informática y Gestión",
+    institution: "Universidad Diego Portales",
+    year: "2020 — 2024",
+  },
+  {
+    degree: "Técnico en Programación Avanzada",
+    institution: "Universidad Diego Portales",
+    year: "2020",
+  },
+];
+
 function About() {
   return (
     <section className="about" id="about">
@@ -75,7 +88,7 @@ function About() {
 
             <div className="about__profile-row">
               <span>Role</span>
-              <strong>Front-end Developer</strong>
+              <strong>Front-end Developer / UX Designer</strong>
             </div>
 
             <div className="about__profile-row">
@@ -85,12 +98,12 @@ function About() {
 
             <div className="about__profile-row">
               <span>Stack</span>
-              <strong>React · Next.js · JavaScript</strong>
+              <strong>Ruby on Rails · React · Next.js · JavaScript</strong>
             </div>
 
             <div className="about__profile-row">
               <span>Based</span>
-              <strong>Pucón · Chile</strong>
+              <strong>Chile</strong>
             </div>
           </motion.aside>
         </div>
@@ -118,6 +131,60 @@ function About() {
             </motion.article>
           ))}
         </div>
+
+        <motion.div
+          className="about__career"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          <div className="about__education">
+            <span className="about__career-label">
+              Formación
+            </span>
+
+            <div className="about__education-list">
+              {education.map((item) => (
+                <div
+                  key={`${item.degree}-${item.year}`}
+                  className="about__education-item"
+                >
+                  <div>
+                    <h3>{item.degree}</h3>
+                    <p>{item.institution}</p>
+                  </div>
+
+                  <span>{item.year}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="about__cv">
+            <span className="about__career-label">
+              Curriculum
+            </span>
+
+            <p>
+              Experiencia profesional, formación y stack técnico
+              reunidos en un documento resumido.
+            </p>
+
+            <a
+              href="/andres-herrera-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about__cv-link"
+            >
+              <span>Ver CV</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

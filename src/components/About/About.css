@@ -1,273 +1,660 @@
+/* =========================================================
+   ABOUT
+========================================================= */
+
 .about {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    overflow: clip;
-  
-    padding: 150px 32px 170px;
-  
-    background: #f1f0ec;
-    color: #111114;
-  }
-  
-  .about__container {
-    width: min(100%, var(--container-width));
-    margin: 0 auto;
-  }
-  
-  /* EYEBROW */
-  
-  .about__eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  
-    margin-bottom: 60px;
-  
-    color: rgba(17, 17, 20, 0.4);
-  
-    font-family: var(--font-mono);
-    font-size: 9px;
-  
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-  }
-  
-  .about__eyebrow > span:first-child {
-    color: var(--color-accent);
-  }
-  
-  .about__eyebrow-line {
-    width: 32px;
-    height: 1px;
-  
-    background: rgba(17, 17, 20, 0.18);
-  }
-  
-  /* MAIN */
-  
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  overflow: clip;
+
+  padding: 150px 32px 170px;
+
+  background: #f1f0ec;
+  color: #111114;
+}
+
+.about__container {
+  width: min(100%, var(--container-width));
+
+  margin-inline: auto;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.about__eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 60px;
+
+  color: rgba(17, 17, 20, 0.48);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.about__eyebrow > span:first-child {
+  color: var(--color-accent);
+}
+
+.about__eyebrow-line {
+  width: 36px;
+  height: 1px;
+
+  background: rgba(17, 17, 20, 0.2);
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.about__layout {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(320px, 0.45fr);
+
+  align-items: end;
+
+  gap: clamp(60px, 8vw, 130px);
+
+  margin-bottom: 120px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.about__intro {
+  min-width: 0;
+}
+
+.about__intro h2 {
+  max-width: 900px;
+
+  margin: 0;
+
+  color: #111114;
+
+  font-size: clamp(56px, 5.5vw, 92px);
+  font-weight: 500;
+
+  line-height: 0.95;
+  letter-spacing: -0.065em;
+}
+
+.about__intro h2 span {
+  color: var(--color-accent);
+}
+
+.about__intro > p {
+  max-width: 660px;
+
+  margin-top: 36px;
+
+  color: rgba(17, 17, 20, 0.58);
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.about__profile {
+  padding: 28px;
+
+  border: 1px solid rgba(17, 17, 20, 0.13);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.34);
+
+  box-shadow:
+    0 18px 50px rgba(17, 17, 20, 0.035);
+}
+
+.about__profile-label {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: rgba(17, 17, 20, 0.36);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.about__profile-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(80px, auto)
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 28px;
+
+  padding: 18px 0;
+
+  border-top: 1px solid rgba(17, 17, 20, 0.1);
+}
+
+.about__profile-row span {
+  color: rgba(17, 17, 20, 0.4);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.about__profile-row strong {
+  color: rgba(17, 17, 20, 0.76);
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   PRINCIPLES
+========================================================= */
+
+.about__principles {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(17, 17, 20, 0.14);
+}
+
+.about__principle {
+  position: relative;
+
+  min-height: 300px;
+
+  padding:
+    40px
+    36px
+    44px
+    0;
+
+  border-right: 1px solid rgba(17, 17, 20, 0.12);
+}
+
+.about__principle:not(:first-child) {
+  padding-left: 36px;
+}
+
+.about__principle:last-child {
+  border-right: none;
+}
+
+.about__principle-index {
+  display: block;
+
+  margin-bottom: 58px;
+
+  color: rgba(17, 17, 20, 0.34);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+}
+
+.about__principle h3 {
+  margin: 0;
+
+  color: #111114;
+
+  font-size: clamp(25px, 2.2vw, 34px);
+  font-weight: 500;
+
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.about__principle p {
+  max-width: 360px;
+
+  margin-top: 18px;
+
+  color: rgba(17, 17, 20, 0.54);
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CAREER / EDUCATION + CV
+========================================================= */
+
+.about__career {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.3fr)
+    minmax(280px, 0.7fr);
+
+  gap: clamp(70px, 8vw, 130px);
+
+  margin-top: 100px;
+  padding-top: 50px;
+
+  border-top: 1px solid rgba(17, 17, 20, 0.14);
+}
+
+
+/* =========================================================
+   CAREER LABEL
+========================================================= */
+
+.about__career-label {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: rgba(17, 17, 20, 0.4);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   EDUCATION
+========================================================= */
+
+.about__education-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__education-item {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
+
+  align-items: end;
+
+  gap: 30px;
+
+  padding: 26px 0;
+
+  border-top: 1px solid rgba(17, 17, 20, 0.1);
+}
+
+.about__education-item:last-child {
+  border-bottom: 1px solid rgba(17, 17, 20, 0.1);
+}
+
+.about__education-item h3 {
+  margin: 0;
+
+  color: #111114;
+
+  font-size: 21px;
+  font-weight: 500;
+
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.about__education-item p {
+  margin-top: 7px;
+
+  color: rgba(17, 17, 20, 0.5);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.about__education-item > span {
+  color: rgba(17, 17, 20, 0.48);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 0.1em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CV
+========================================================= */
+
+.about__cv {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  padding-left: 4px;
+}
+
+.about__cv p {
+  max-width: 340px;
+
+  margin: 0;
+
+  color: rgba(17, 17, 20, 0.54);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.about__cv-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 30px;
+  padding-bottom: 9px;
+
+  border-bottom: 1px solid rgba(17, 17, 20, 0.22);
+
+  color: rgba(17, 17, 20, 0.84);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 250ms ease,
+    border-color 250ms ease,
+    transform 250ms ease;
+}
+
+.about__cv-link span:last-child {
+  color: var(--color-accent);
+
+  transition: transform 250ms ease;
+}
+
+.about__cv-link:hover {
+  color: #111114;
+
+  border-color: var(--color-accent);
+}
+
+.about__cv-link:hover span:last-child {
+  transform: translate(3px, -3px);
+}
+
+.about__cv-link:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 1050px) {
   .about__layout {
-    display: grid;
-  
     grid-template-columns:
-      minmax(0, 1.15fr)
-      minmax(280px, 0.45fr);
-  
-    gap: clamp(60px, 9vw, 140px);
-  
-    align-items: end;
-  
-    margin-bottom: 120px;
+      minmax(0, 1fr)
+      minmax(280px, 0.5fr);
+
+    gap: 54px;
   }
-  
-  .about__intro h2 {
-    max-width: 900px;
-  
-    margin: 0;
-  
-    font-size: clamp(56px, 5.5vw, 92px);
-    font-weight: 500;
-  
-    line-height: 0.95;
-    letter-spacing: -0.065em;
-  
-    color: #111114;
-  }
-  
-  .about__intro h2 span {
-    color: var(--color-accent);
-  }
-  
-  .about__intro > p {
-    max-width: 650px;
-  
-    margin-top: 36px;
-  
-    color: rgba(17, 17, 20, 0.5);
-  
-    font-size: 16px;
-    line-height: 1.75;
-  }
-  
-  /* PROFILE */
-  
+
   .about__profile {
-    padding: 26px;
-  
-    border: 1px solid rgba(17, 17, 20, 0.12);
-    border-radius: 22px;
-  
-    background: rgba(255, 255, 255, 0.28);
+    padding: 24px;
   }
-  
-  .about__profile-label {
-    display: block;
-  
-    margin-bottom: 26px;
-  
-    color: rgba(17, 17, 20, 0.26);
-  
-    font-family: var(--font-mono);
-    font-size: 12px;
-  
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-  
+
   .about__profile-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-  
-    padding: 16px 0;
-  
-    border-top: 1px solid rgba(17, 17, 20, 0.1);
+    gap: 20px;
   }
-  
-  .about__profile-row span {
-    color: rgba(17, 17, 20, 0.3);
-  
-    font-family: var(--font-mono);
-    font-size: 10px;
-  
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+
+  .about__career {
+    gap: 60px;
   }
-  
-  .about__profile-row strong {
-    color: rgba(17, 17, 20, 0.7);
-  
-    font-size: 10px;
-    font-weight: 500;
-  
-    text-align: right;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+  .about__layout {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+
+    margin-bottom: 90px;
   }
-  
-  /* PRINCIPLES */
-  
+
+  .about__profile {
+    width: min(100%, 560px);
+  }
+
   .about__principles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  
-    border-top: 1px solid rgba(17, 17, 20, 0.14);
+    grid-template-columns: 1fr;
   }
-  
+
   .about__principle {
-    position: relative;
-  
-    min-height: 300px;
-  
-    padding: 38px 36px 40px 0;
-  
-    border-right: 1px solid rgba(17, 17, 20, 0.12);
-  }
-  
-  .about__principle:not(:first-child) {
-    padding-left: 36px;
-  }
-  
-  .about__principle:last-child {
+    min-height: auto;
+
+    padding: 42px 0;
+
     border-right: none;
+    border-bottom: 1px solid rgba(17, 17, 20, 0.12);
   }
-  
+
+  .about__principle:not(:first-child) {
+    padding-left: 0;
+  }
+
   .about__principle-index {
-    display: block;
-  
-    margin-bottom: 60px;
-  
-    color: rgba(17, 17, 20, 0.25);
-  
-    font-family: var(--font-mono);
-    font-size: 8px;
-  
-    letter-spacing: 0.12em;
+    margin-bottom: 28px;
   }
-  
-  .about__principle h3 {
-    margin: 0;
-  
-    color: #111114;
-  
-    font-size: clamp(24px, 2.2vw, 34px);
-    font-weight: 500;
-  
-    line-height: 1.05;
-    letter-spacing: -0.04em;
-  }
-  
+
   .about__principle p {
-    max-width: 360px;
-  
-    margin-top: 18px;
-  
-    color: rgba(17, 17, 20, 0.46);
-  
+    max-width: 620px;
+  }
+
+  .about__career {
+    grid-template-columns: 1fr;
+
+    gap: 58px;
+
+    margin-top: 80px;
+  }
+
+  .about__cv p {
+    max-width: 520px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .about {
+    padding:
+      110px
+      20px
+      120px;
+  }
+
+  .about__eyebrow {
+    margin-bottom: 40px;
+
+    font-size: 9px;
+  }
+
+  .about__layout {
+    gap: 46px;
+
+    margin-bottom: 76px;
+  }
+
+  .about__intro h2 {
+    font-size: clamp(46px, 14vw, 68px);
+  }
+
+  .about__intro > p {
+    margin-top: 28px;
+
+    font-size: 15px;
+  }
+
+  .about__profile {
+    width: 100%;
+
+    padding: 21px;
+  }
+
+  .about__profile-label {
+    margin-bottom: 24px;
+
+    font-size: 9px;
+  }
+
+  .about__profile-row {
+    grid-template-columns:
+      minmax(70px, auto)
+      minmax(0, 1fr);
+
+    gap: 18px;
+
+    padding: 16px 0;
+  }
+
+  .about__profile-row span {
+    font-size: 8px;
+  }
+
+  .about__profile-row strong {
+    font-size: 11px;
+  }
+
+  .about__principle {
+    padding: 38px 0;
+  }
+
+  .about__principle h3 {
+    font-size: 26px;
+  }
+
+  .about__principle p {
     font-size: 14px;
-    line-height: 1.7;
   }
-  
-  /* RESPONSIVE */
-  
-  @media (max-width: 950px) {
-    .about__layout {
-      grid-template-columns: 1fr;
-      gap: 60px;
-    }
-  
-    .about__profile {
-      max-width: 520px;
-    }
-  
-    .about__principles {
-      grid-template-columns: 1fr;
-    }
-  
-    .about__principle {
-      min-height: auto;
-  
-      padding: 40px 0;
-  
-      border-right: none;
-      border-bottom: 1px solid rgba(17, 17, 20, 0.12);
-    }
-  
-    .about__principle:not(:first-child) {
-      padding-left: 0;
-    }
-  
-    .about__principle-index {
-      margin-bottom: 30px;
-    }
+
+  .about__career {
+    gap: 48px;
+
+    margin-top: 64px;
+    padding-top: 38px;
   }
-  
-  @media (max-width: 700px) {
-    .about {
-      padding: 110px 20px 120px;
-    }
-  
-    .about__eyebrow {
-      margin-bottom: 40px;
-    }
-  
-    .about__layout {
-      margin-bottom: 80px;
-    }
-  
-    .about__intro h2 {
-      font-size: clamp(46px, 14vw, 68px);
-    }
-  
-    .about__intro > p {
-      margin-top: 28px;
-  
-      font-size: 14px;
-    }
-  
-    .about__profile {
-      padding: 20px;
-    }
-  
-    .about__profile-row {
-      gap: 20px;
-    }
+
+  .about__career-label {
+    margin-bottom: 22px;
+
+    font-size: 9px;
   }
+
+  .about__education-item {
+    grid-template-columns: 1fr;
+
+    align-items: start;
+
+    gap: 12px;
+
+    padding: 22px 0;
+  }
+
+  .about__education-item h3 {
+    font-size: 19px;
+  }
+
+  .about__education-item p {
+    font-size: 13px;
+  }
+
+  .about__cv p {
+    font-size: 14px;
+  }
+
+  .about__cv-link {
+    margin-top: 24px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 440px) {
+  .about {
+    padding-inline: 18px;
+  }
+
+  .about__intro h2 {
+    font-size: clamp(43px, 13vw, 58px);
+  }
+
+  .about__profile-row {
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+  }
+
+  .about__profile-row strong {
+    text-align: left;
+  }
+
+  .about__principle h3 {
+    font-size: 24px;
+  }
+}
