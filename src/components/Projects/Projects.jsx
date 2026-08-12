@@ -90,26 +90,6 @@ const projects = [
   },
   {
     id: "05",
-    company: "iED Global",
-    title: "Plataforma digital para educación",
-    description:
-      "Implementación frontend en React a partir de un diseño existente, desarrollando funcionalidades, flujos de navegación e interacción para garantizar una experiencia consistente y el correcto funcionamiento de la plataforma.",
-    tags: [
-      "React",
-      "JavaScript",
-      "Front-end",
-      "Responsive UI",
-      "EdTech",
-      "UI Implementation",
-    ],
-    type: "EdTech Platform",
-    year: "2025",
-    role: "Front-end Developer",
-    url: "https://i-edglobal.com/",
-    image: ied,
-  },
-  {
-    id: "06",
     company: "Tacto Sur",
     title: "Plataforma cultural para artes escénicas",
     description:
@@ -127,6 +107,26 @@ const projects = [
     role: "Design & Front-end Developer",
     url: "https://tactosur.com/",
     image: tactoSur,
+  },
+  {
+    id: "06",
+    company: "iED Global",
+    title: "Plataforma digital para educación",
+    description:
+      "Implementación frontend en React a partir de un diseño existente, desarrollando funcionalidades, flujos de navegación e interacción para garantizar una experiencia consistente y el correcto funcionamiento de la plataforma.",
+    tags: [
+      "React",
+      "JavaScript",
+      "Front-end",
+      "Responsive UI",
+      "EdTech",
+      "UI Implementation",
+    ],
+    type: "EdTech Platform",
+    year: "2025",
+    role: "Front-end Developer",
+    url: "https://i-edglobal.com/",
+    image: ied,
   },
 ];
 
