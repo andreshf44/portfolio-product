@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import haikuImg from "../../assets/images/projects/haiku.png";
 import goFlyImg from "../../assets/images/projects/go-fly-fishing.png";
-import weghausImg from "../../assets/images/projects/weghaus.png";
+import tactoSurImg from "../../assets/images/projects/tacto-sur.png";
 
 import "./Hero.css";
 
@@ -28,12 +28,12 @@ const projects = [
   },
   {
     id: "03",
-    name: "Weghaus",
-    image: weghausImg,
-    role: "Front-end Development",
-    stack: "Dynamic UI · State · Forms",
-    tag: "Interactive configurator",
-    alt: "Interfaz Weghaus desarrollada por Andrés Herrera",
+    name: "Tacto Sur",
+    image: tactoSurImg,
+    role: "Design & Front-end Developer",
+    stack: "React · Responsive UI · Mercado Pago",
+    tag: "Cultural platform",
+    alt: "Plataforma cultural Tacto Sur diseñada y desarrollada por Andrés Herrera",
   },
 ];
 

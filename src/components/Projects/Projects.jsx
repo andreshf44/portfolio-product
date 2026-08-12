@@ -45,7 +45,7 @@ const projects = [
     type: "Hospitality",
     year: "2026",
     role: "Design & Front-end Developer",
-    url: "https://haiku-web.vercel.app/",
+    url: "https://haikurefugio.cl/",
     image: haikuImg,
   },
   {
