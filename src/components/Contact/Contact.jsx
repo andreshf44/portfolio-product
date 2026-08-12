@@ -67,7 +67,6 @@ function Contact() {
           >
             <div className="contact__aside-header">
               <span>Links</span>
-              <span>05 / 05</span>
             </div>
 
             <a
@@ -86,12 +85,26 @@ function Contact() {
 
             <a
               className="contact__link"
+              href="https://wa.me/56944177821"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>
+                <small>02</small>
+                WhatsApp / Teléfono 
+              </span>
+              
+              <span>↗</span>
+            </a>
+
+            <a
+              className="contact__link"
               href="https://github.com/andreshf44?tab=repositories"
               target="_blank"
               rel="noreferrer"
             >
               <span>
-                <small>02</small>
+                <small>03</small>
                 GitHub
               </span>
 
@@ -103,18 +116,13 @@ function Contact() {
               href="mailto:andreshf@live.cl"
             >
               <span>
-                <small>03</small>
+                <small>04</small>
                 Email
               </span>
 
               <span>↗</span>
             </a>
 
-            <div className="contact__location">
-              <span className="contact__location-label">Based in</span>
-              <strong>Pucón · Chile</strong>
-              <span>Disponible para trabajo remoto</span>
-            </div>
           </motion.aside>
         </div>
       </div>

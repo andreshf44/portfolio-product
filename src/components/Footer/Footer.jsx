@@ -12,6 +12,13 @@ function Footer() {
           </span>
 
           <span>Andrés Herrera</span>
+          <a
+            href="https://wa.me/56944177821"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+             +56 9 44177821
+          </a>
         </div>
 
         <p>
