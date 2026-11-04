@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 
+import VonRiguenImg from "../../assets/images/projects/von-riegen.png";
 import haikuImg from "../../assets/images/projects/haiku.png";
 import goFlyImg from "../../assets/images/projects/go-fly-fishing.png";
 import weghausImg from "../../assets/images/projects/weghaus.png";
@@ -30,6 +31,26 @@ const projects = [
   },
   {
     id: "02",
+    company: "Von Riegen Arquitectos",
+    title: "Arquitectura y presencia digital",
+    description:
+      "Diseño y desarrollo de una plataforma web para un estudio de arquitectura en Pucón, enfocada en presentar sus servicios y proyectos mediante una experiencia visual minimalista, responsive y funcional. Implementación de un formulario de contacto integrado con servicios backend para gestionar consultas de potenciales clientes.",
+    tags: [
+      "React",
+      "JavaScript",
+      "Vite",
+      "Responsive UI",
+      "UX/UI",
+      "Serverless API",
+    ],
+    type: "Architecture",
+    year: "2026",
+    role: "Design & Front-end Developer",
+    url: "https://vonriegenarquitectos.cl/",
+    image: VonRiguenImg,
+  },
+  {
+    id: "03",
     company: "Haiku",
     title: "Experiencia digital para alojamientos",
     description:
@@ -49,7 +70,7 @@ const projects = [
     image: haikuImg,
   },
   {
-    id: "03",
+    id: "04",
     company: "Go Fly Fishing",
     title: "Plataforma web para turismo de pesca",
     description:
@@ -69,7 +90,7 @@ const projects = [
     image: goFlyImg,
   },
   {
-    id: "04",
+    id: "05",
     company: "Weghaus",
     title: "Configurador interactivo de productos",
     description:
@@ -89,7 +110,7 @@ const projects = [
     image: weghausImg,
   },
   {
-    id: "05",
+    id: "06",
     company: "Tacto Sur",
     title: "Plataforma cultural para artes escénicas",
     description:
@@ -109,7 +130,7 @@ const projects = [
     image: tactoSur,
   },
   {
-    id: "06",
+    id: "07",
     company: "iED Global",
     title: "Plataforma digital para educación",
     description:
