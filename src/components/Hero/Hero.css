@@ -12,8 +12,7 @@
   min-height: 100svh;
 
   overflow: hidden;
-
-  padding: 112px 32px 48px;
+  padding: 100px 32px 32px;
 
   background:
     radial-gradient(
@@ -131,13 +130,12 @@
 
   align-items: center;
 
-  gap: clamp(46px, 5vw, 82px);
+  gap: clamp(32px, 4vw, 64px);
 
   width: min(100%, var(--container-width));
 
   margin-inline: auto;
 }
-
 
 /* =========================================================
    LEFT CONTENT
@@ -162,7 +160,7 @@
 
   gap: 15px;
 
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 
   color: rgba(245, 245, 247, 0.6);
 
@@ -198,7 +196,7 @@
 
   color: var(--color-text);
 
-  font-size: clamp(52px, 5.1vw, 86px);
+  font-size: clamp(48px, 3.8vw, 72px);
   font-weight: 500;
 
   line-height: 0.91;
@@ -217,13 +215,13 @@
 .hero__description {
   max-width: 590px;
 
-  margin-top: 25px;
+  margin-top: 20px;
 
   color: rgba(245, 245, 247, 0.64);
 
   font-size: clamp(16px, 1.25vw, 19px);
 
-  line-height: 1.65;
+  line-height: 1.55;
 }
 
 
@@ -237,7 +235,7 @@
 
   gap: 12px;
 
-  margin-top: 30px;
+  margin-top: 24px;
 }
 
 .hero__button {
@@ -315,7 +313,7 @@
 
   gap: 26px;
 
-  margin-top: 36px;
+  margin-top: 26px;
 }
 
 .hero__meta-item {
@@ -390,7 +388,7 @@
   align-items: center;
   justify-content: space-between;
 
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   color: rgba(245, 245, 247, 0.48);
 
@@ -485,7 +483,7 @@
 .hero__image-wrapper {
   position: relative;
 
-  aspect-ratio: 1.55 / 1;
+  aspect-ratio: 1.9 / 1;
 
   overflow: hidden;
 
@@ -652,9 +650,9 @@
 
   gap: 20px;
 
-  min-height: 98px;
+  min-height: 78px;
 
-  padding: 21px 23px;
+  padding: 15px 20px;
 }
 
 .hero__frame-footer > div {
@@ -736,11 +734,11 @@
 .hero__project-nav {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
-  gap: 14px;
+  gap: 10px;
 
-  margin-top: 17px;
+  margin-top: 10px;
 }
 
 .hero__project-dot {
@@ -751,7 +749,7 @@
 
   min-width: 0;
 
-  padding: 10px 0;
+  padding: 6px 0;
 
   border: 0;
 
@@ -817,7 +815,7 @@
 .hero__scroll {
   position: absolute;
 
-  bottom: 55px;
+  bottom: 28px;
   left: 41px;
 
   display: flex;

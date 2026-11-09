@@ -1,11 +1,13 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import BeTrustCaseModal from "../CaseModal/BeTrustCaseModal";
 
-import VonRiguenImg from "../../assets/images/projects/von-riegen.png";
+import VonRiegenImg from "../../assets/images/projects/von-riegen.png";
 import haikuImg from "../../assets/images/projects/haiku.png";
 import goFlyImg from "../../assets/images/projects/go-fly-fishing.png";
 import weghausImg from "../../assets/images/projects/weghaus.png";
-import ied from "../../assets/images/projects/ied.png"
-import tactoSur from "../../assets/images/projects/tacto-sur.png"
+import iedImg from "../../assets/images/projects/ied.png"
+import tactoSurImg from "../../assets/images/projects/tacto-sur.png"
 
 import "./Projects.css";
 
@@ -28,6 +30,7 @@ const projects = [
     year: "2024 — Actualidad",
     role: "Front-end Developer",
     image: null,
+    caseStudy: true,
   },
   {
     id: "02",
@@ -47,7 +50,7 @@ const projects = [
     year: "2026",
     role: "Design & Front-end Developer",
     url: "https://vonriegenarquitectos.cl/",
-    image: VonRiguenImg,
+    image: VonRiegenImg,
   },
   {
     id: "03",
@@ -127,7 +130,7 @@ const projects = [
     year: "2025",
     role: "Design & Front-end Developer",
     url: "https://tactosur.com/",
-    image: tactoSur,
+    image: tactoSurImg,
   },
   {
     id: "07",
@@ -147,7 +150,7 @@ const projects = [
     year: "2025",
     role: "Front-end Developer",
     url: "https://i-edglobal.com/",
-    image: ied,
+    image: iedImg,
   },
 ];
 
@@ -176,7 +179,10 @@ const item = {
 };
 
 function Projects() {
+  const [isBeTrustModalOpen, setIsBeTrustModalOpen] = useState(false);
+
   return (
+    <>
     <section className="projects" id="projects">
       <div className="projects__container">
         <motion.header
@@ -190,7 +196,6 @@ function Projects() {
           }}
         >
           <div className="projects__eyebrow">
-            <span>02</span>
             <span className="projects__eyebrow-line" />
             <span>Selected work</span>
           </div>
@@ -279,28 +284,57 @@ function Projects() {
                       </div>
                     </>
                   ) : (
-                    <div className="project__placeholder">
-                      <span>{project.id}</span>
-
-                      <strong>{project.company}</strong>
-
-                      <small>
-                        Case study / preview
-                        <br />
-                        en preparación
-                      </small>
-                    </div>
+                    project.caseStudy ? (
+                      <div className="project__case-preview">
+                        <span className="project__case-eyebrow">
+                          Case study
+                        </span>
+                    
+                        <div className="project__case-heading">
+                          <h4>BeTrust</h4>
+                          <p>Firma electrónica y gestión documental</p>
+                        </div>
+                    
+                        <div className="project__case-stats">
+                          <div>
+                            <strong>109</strong>
+                            <span>Tickets finalizados · FirmaYa</span>
+                          </div>
+                    
+                          <div>
+                            <strong>102</strong>
+                            <span>Tickets finalizados · Colbún</span>
+                          </div>
+                        </div>
+                    
+                        <button
+                          type="button"
+                          onClick={() => setIsBeTrustModalOpen(true)}
+                          className="project__case-button"
+                        >
+                          Leer caso completo <span aria-hidden="true">↗</span>
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="project__placeholder">
+                        <span>{project.id}</span>
+                        <strong>{project.company}</strong>
+                        <small>Vista previa en preparación</small>
+                      </div>
+                    )
                   )}
 
-                  <a
-                    className="project__open"
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Ver proyecto ${project.company}`}
-                  >
-                    ↗
-                  </a>
+                  {project.url && (
+                    <a
+                      className="project__open"
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Ver proyecto ${project.company}`}
+                    >
+                      ↗
+                    </a>
+                  )}
                   
                 </div>
               </div>
@@ -309,6 +343,14 @@ function Projects() {
         </motion.div>
       </div>
     </section>
+    {/* Modal de BeTrust */}
+    {isBeTrustModalOpen && (
+      <BeTrustCaseModal
+        onClose={() => setIsBeTrustModalOpen(false)}
+      />
+      
+    )}
+    </>
   );
 }
 

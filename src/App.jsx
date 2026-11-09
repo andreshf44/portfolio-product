@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 
 import Intro from "./components/Intro/Intro";
@@ -15,6 +16,14 @@ import "./App.css";
 function App() {
   const [hasEntered, setHasEntered] = useState(false);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasEntered(true);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <main className="app">
       <AnimatePresence mode="wait">
@@ -30,11 +39,11 @@ function App() {
         <>
           <Navbar />
           <Hero />
-          <Projects/>
-          <Experience/>
-          <About/>
-          <Contact/>
-          <Footer/>
+          <Projects />
+          <Experience />
+          <About />
+          <Contact />
+          <Footer />
         </>
       )}
     </main>

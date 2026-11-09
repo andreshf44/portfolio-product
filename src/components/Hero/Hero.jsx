@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+import VonRiegenImg from "../../assets/images/projects/von-riegen.png";
 import haikuImg from "../../assets/images/projects/haiku.png";
 import goFlyImg from "../../assets/images/projects/go-fly-fishing.png";
 import tactoSurImg from "../../assets/images/projects/tacto-sur.png";
@@ -10,6 +11,15 @@ import "./Hero.css";
 const projects = [
   {
     id: "01",
+    name: "Von Riegen Arquitectos",
+    image: VonRiegenImg,
+    role: "Design + Front-end",
+    stack: "React · JavaScript · Vite",
+    tag: "Architecture · Web Experience",
+    alt: "Sitio web de Von Riegen Arquitectos diseñado y desarrollado por Andrés Herrera",
+  },
+  {
+    id: "02",
     name: "Haiku",
     image: haikuImg,
     role: "Design + Front-end",
@@ -18,7 +28,7 @@ const projects = [
     alt: "Sitio web Haiku desarrollado por Andrés Herrera",
   },
   {
-    id: "02",
+    id: "03",
     name: "Go Fly Fishing",
     image: goFlyImg,
     role: "Design + Development",
@@ -27,7 +37,7 @@ const projects = [
     alt: "Sitio web Go Fly Fishing desarrollado por Andrés Herrera",
   },
   {
-    id: "03",
+    id: "04",
     name: "Tacto Sur",
     image: tactoSurImg,
     role: "Design & Front-end Developer",
@@ -92,7 +102,7 @@ function Hero() {
         >
           <motion.div className="hero__eyebrow" variants={textItem}>
             <span className="hero__eyebrow-line" />
-            <span>Front-end developer · Product experience</span>
+            <span>Front-end developer · React · Product experience</span>
           </motion.div>
 
           <motion.h1 className="hero__title" variants={textItem}>
@@ -103,8 +113,10 @@ function Hero() {
           </motion.h1>
 
           <motion.p className="hero__description" variants={textItem}>
-            Diseño y construyo productos digitales donde la estrategia, la
-            interfaz y la tecnología funcionan como un mismo sistema.
+            Desarrollo interfaces y aplicaciones web que combinan claridad, 
+            rendimiento y una experiencia de usuario cuidada. Trabajo con React, 
+            Next.js y tecnologías frontend para transformar necesidades de producto 
+            en soluciones funcionales.
           </motion.p>
 
           <motion.div className="hero__actions" variants={textItem}>
@@ -112,15 +124,16 @@ function Hero() {
               href="#projects"
               className="hero__button hero__button--primary"
             >
-              <span>Ver proyectos</span>
-              <span aria-hidden="true">↘</span>
+              Ver proyectos
             </a>
 
             <a
-              href="#about"
+              href="/andres-herrera-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hero__button hero__button--secondary"
             >
-              Conocer mi proceso
+              Ver CV
             </a>
           </motion.div>
 

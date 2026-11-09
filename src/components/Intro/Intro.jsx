@@ -56,8 +56,7 @@ function Intro({ onEnter }) {
         </span>
 
         <span className="intro__label">
-          <span className="intro__label-index">01</span>
-          <span>Click para iniciar</span>
+          <span>Bienvenido a mi Universo Digital</span>
         </span>
       </motion.button>
 
