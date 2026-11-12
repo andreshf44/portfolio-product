@@ -15,9 +15,9 @@ const projects = [
   {
     id: "01",
     company: "BeTrust",
-    title: "Plataforma de firma electrónica",
+    title: "Firma electrónica y gestión documental",
     description:
-      "Desarrollo y evolución de interfaces para una plataforma de firma electrónica y gestión documental, participando en flujos de producto, administración de usuarios y experiencias adaptadas a distintos perfiles del sistema.",
+      "Desarrollo frontend en aplicaciones Ruby on Rails, implementando interfaces responsive, flujos multipaso con Turbo Frames y funcionalidades interactivas con JavaScript. Participación en la evolución técnica y visual de FirmaYa2 y Colbún.",
     tags: [
       "Web App",
       "Ruby on Rails",
@@ -208,9 +208,9 @@ function Projects() {
             </h2>
 
             <p>
-            Una selección de aplicaciones, productos y experiencias 
-            digitales donde estrategia, diseño y desarrollo se integran 
-            para construir mejores productos.
+            Una selección de productos digitales en los que he participado, 
+            desde la implementación frontend y el desarrollo de funcionalidades 
+            hasta el diseño de interfaces y experiencias de usuario.
             </p>
           </div>
         </motion.header>

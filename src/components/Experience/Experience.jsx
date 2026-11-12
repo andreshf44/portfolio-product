@@ -75,6 +75,7 @@ function Experience() {
           <div className="experience__heading">
             <h2>
               Experiencia construyendo
+              <br/>
               <span> productos digitales.</span>
             </h2>
 

@@ -7,68 +7,60 @@ import "./BeTrustCaseModal.css";
 const contributions = {
   firmaya: [
     {
-      title: "Arquitectura e implementación de vistas.",
+      title: "Vistas integradas en Ruby on Rails.",
       description:
-        "Construcción y organización de la estructura HTML de nuevas interfaces, integrando los diseños dentro de la aplicación Ruby on Rails y definiendo una base visual y funcional coherente entre las distintas vistas.",
+        "Construcción y organización de vistas HTML y estilos CSS dentro de la aplicación, implementando nuevos diseños y ajustando la estructura de las interfaces a los flujos del producto.",
     },
     {
-      title: "Implementación del rediseño de FirmaYa2.",
+      title: "Flujos multipaso con Turbo Frames.",
       description:
-        "Desarrollo de nuevas interfaces a partir de propuestas de diseño, trasladando decisiones de jerarquía visual, composición, navegación y experiencia de usuario a componentes y vistas funcionales.",
+        "Implementación de etapas del proceso de firma electrónica mediante actualizaciones parciales de la interfaz, sin recargar la página completa. El contenido del contenedor cambia al avanzar desde la carga de documentos hacia la incorporación de firmantes.",
     },
     {
-      title: "Desarrollo responsive.",
+      title: "Interacciones con JavaScript.",
       description:
-        "Implementación y adaptación de interfaces para escritorio y dispositivos móviles, trabajando sobre la distribución de contenidos, el comportamiento de los elementos y la consistencia de la experiencia en distintos tamaños de pantalla.",
+        "Desarrollo de comportamientos de interfaz como apertura y cierre de modales, expansión de paneles de contenido y respuesta a eventos del usuario.",
     },
     {
-      title: "Flujos e interacciones frontend.",
+      title: "Implementación responsive y evolución de vistas.",
       description:
-        "Desarrollo de funcionalidades e interacciones con JavaScript, Hotwire, Turbo y Stimulus, conectando el comportamiento de las interfaces con los flujos y funcionalidades de la aplicación Rails.",
-    },
-    {
-      title: "Evolución y mantenimiento del producto.",
-      description:
-        "Implementación de requerimientos, ajustes sobre funcionalidades existentes, resolución de incidencias y mejoras de interfaz dentro de una plataforma en desarrollo continuo.",
+        "Adaptación de interfaces para escritorio y dispositivos móviles, implementación de diseños aprobados, corrección de incidencias y mantenimiento de funcionalidades existentes.",
     },
   ],
+
   colbun: [
     {
-      title: "Diseño de experiencias móviles.",
+      title: "Diseño de interfaces mobile.",
       description:
-        "Diseño de versiones mobile a partir de interfaces existentes, reorganizando contenidos, elementos de navegación y componentes para ofrecer una experiencia adaptada a pantallas pequeñas.",
+        "Diseño de versiones móviles a partir de pantallas desktop existentes, reorganizando contenido, navegación y componentes para su uso en formatos reducidos.",
     },
     {
-      title: "Implementación de interfaces desktop.",
+      title: "Implementación de vistas desktop.",
       description:
-        "Desarrollo de vistas para escritorio, trasladando diseños visuales a estructuras HTML y estilos CSS integrados en la aplicación.",
+        "Desarrollo de interfaces de escritorio mediante HTML y CSS, integrando los diseños en la estructura de vistas de Ruby on Rails.",
     },
     {
-      title: "Adaptación responsive.",
+      title: "Responsive y funcionalidades frontend.",
       description:
-        "Implementación de comportamientos responsive para mantener la funcionalidad y coherencia visual de las interfaces entre dispositivos.",
-    },
-    {
-      title: "Funcionalidades frontend.",
-      description:
-        "Desarrollo y modificación de funcionalidades con JavaScript y Ruby on Rails, trabajando sobre la interacción de las vistas y su integración con el funcionamiento de la aplicación.",
+        "Adaptación de vistas entre tamaños de pantalla y desarrollo o ajuste de comportamientos con JavaScript dentro de la aplicación Rails.",
     },
   ],
+
   design: [
     {
-      title: "Diseño orientado a producto.",
+      title: "Análisis de flujos e interfaces.",
       description:
-        "Análisis de interfaces y flujos existentes para identificar oportunidades de mejora en claridad, navegación, accesibilidad y experiencia de usuario.",
+        "Revisión de recorridos de usuario para identificar oportunidades de mejora en jerarquía visual, navegación, claridad y accesibilidad.",
     },
     {
-      title: "Experiencia de acceso a FirmaYa2.",
+      title: "Propuesta de rediseño del acceso a FirmaYa2.",
       description:
-        "Trabajo sobre el rediseño de la interfaz de acceso, considerando jerarquía de información, claridad de las acciones, confianza visual y adaptación responsive.",
+        "Diseño de una experiencia de ingreso con mayor claridad en las acciones, señales de confianza y adaptación responsive; trabajo de diseño diferenciado de las funcionalidades ya implementadas.",
     },
     {
-      title: "Sistema de criterios UX/UI.",
+      title: "Documentación del sistema de diseño.",
       description:
-        "Desarrollo de un Design Book para documentar principios de diseño, decisiones visuales y propuestas de evolución de la experiencia digital.",
+        "Elaboración de un Design Book con criterios de cercanía, confianza, claridad, accesibilidad y calma para orientar y documentar la evolución de las interfaces.",
     },
   ],
 };
@@ -200,7 +192,8 @@ function BeTrustCaseModal({ onClose }) {
           id="betrust-case-title"
           className="case-modal__title"
         >
-          Desarrollo frontend para{" "}
+          Experiencia construyendo
+          <br />
           <span>productos digitales.</span>
         </h2>
 
@@ -213,7 +206,8 @@ function BeTrustCaseModal({ onClose }) {
           <div>
             <small>TECNOLOGÍAS</small>
             <span>
-              Ruby on Rails · Hotwire · JavaScript · HTML · CSS
+              Ruby on Rails · Hotwire (Turbo Frames) ·
+              JavaScript · HTML · CSS
             </span>
           </div>
 
@@ -232,14 +226,13 @@ function BeTrustCaseModal({ onClose }) {
 
           <div>
             <p id="betrust-case-description">
-              En BeTrust participo en el desarrollo frontend de
-              productos digitales, trabajando en la construcción,
-              implementación y evolución de interfaces para
-              aplicaciones web. Mi experiencia comprende dos
-              proyectos principales: FirmaYa2 y Colbún, en los
-              que he desarrollado vistas, funcionalidades,
-              experiencias responsive e integraciones frontend
-              dentro de aplicaciones Ruby on Rails.
+              En BeTrust trabajo como Front-end Developer
+              en FirmaYa2 y Colbún, dos aplicaciones
+              desarrolladas sobre Ruby on Rails. Mi
+              contribución abarca implementación de vistas,
+              flujos interactivos con Hotwire y JavaScript,
+              adaptación responsive y mantenimiento de
+              interfaces existentes.
             </p>
           </div>
         </section>
@@ -264,7 +257,7 @@ function BeTrustCaseModal({ onClose }) {
           <ContributionList items={contributions.colbun} />
         </section>
 
-        {/* 04 — UX/UI */}
+        {/* 04 — UX/UI Y PRODUCTO */}
 
         <section className="case-modal__section">
           <span className="case-modal__section-label">
@@ -274,130 +267,40 @@ function BeTrustCaseModal({ onClose }) {
           <ContributionList items={contributions.design} />
         </section>
 
-        {/* 05 — ENFOQUE TÉCNICO */}
+        {/* 05 — CONTRIBUCIÓN Y RESULTADOS */}
 
         <section className="case-modal__section">
           <span className="case-modal__section-label">
-            05 / ENFOQUE TÉCNICO
-          </span>
-
-          <div className="case-modal__contributions">
-            <p>
-              <strong>Ruby on Rails.</strong>{" "}
-              Implementación y evolución de vistas dentro
-              de aplicaciones Rails, integrando la estructura
-              de las interfaces con las funcionalidades
-              del producto.
-            </p>
-
-            <p>
-              <strong>Hotwire, Turbo y Stimulus.</strong>{" "}
-              Desarrollo de interacciones y comportamientos
-              dinámicos en el frontend, utilizando las
-              herramientas de Hotwire dentro del entorno Rails.
-            </p>
-
-            <p>
-              <strong>JavaScript.</strong>{" "}
-              Implementación de lógica de interfaz,
-              funcionalidades interactivas y comportamientos
-              asociados a los flujos de usuario.
-            </p>
-
-            <p>
-              <strong>HTML y CSS.</strong>{" "}
-              Construcción de estructuras de vistas,
-              implementación de diseños visuales y
-              adaptación responsive para distintos
-              dispositivos.
-            </p>
-
-            <p>
-              <strong>Trabajo sobre producto existente.</strong>{" "}
-              Desarrollo de nuevas funcionalidades y
-              mantenimiento de interfaces dentro de
-              aplicaciones con código y flujos previamente
-              establecidos.
-            </p>
-          </div>
-        </section>
-
-        {/* 06 — EN NÚMEROS */}
-
-        <section className="case-modal__section">
-          <span className="case-modal__section-label">
-            06 / EN NÚMEROS
-          </span>
-
-          <div className="case-modal__stats">
-            <div>
-              <strong>109</strong>
-              <span>
-                Tickets finalizados · FirmaYa
-              </span>
-            </div>
-
-            <div>
-              <strong>102</strong>
-              <span>
-                Tickets finalizados · Colbún
-              </span>
-            </div>
-          </div>
-        </section>
-
-        {/* 07 — RESULTADOS */}
-
-        <section className="case-modal__section">
-          <span className="case-modal__section-label">
-            07 / RESULTADOS
-          </span>
-
-          <div className="case-modal__contributions">
-            <p>
-              <strong>Implementación de nuevas experiencias.</strong>{" "}
-              Desarrollo de vistas e interfaces funcionales
-              a partir de diseños, integradas en aplicaciones
-              utilizadas en contextos reales de negocio.
-            </p>
-
-            <p>
-              <strong>Evolución de interfaces existentes.</strong>{" "}
-              Adaptación de experiencias desktop y mobile,
-              incorporación de funcionalidades y mantenimiento
-              de componentes y flujos frontend.
-            </p>
-
-            <p>
-              <strong>Contribución al diseño de producto.</strong>{" "}
-              Participación en decisiones de experiencia
-              de usuario, implementación de rediseños
-              y elaboración de propuestas de evolución visual
-              y funcional.
-            </p>
-          </div>
-        </section>
-
-        {/* 08 — APRENDIZAJES */}
-
-        <section className="case-modal__section">
-          <span className="case-modal__section-label">
-            08 / APRENDIZAJES
+            05 / CONTRIBUCIÓN EN CIFRAS
           </span>
 
           <div>
-            <p>
-              Esta experiencia ha fortalecido mi capacidad
-              para trabajar sobre aplicaciones en producción,
-              comprender arquitecturas frontend existentes
-              y desarrollar soluciones que integran diseño,
-              interacción y funcionamiento técnico.
-              También me ha permitido profundizar en el
-              ecosistema Ruby on Rails y Hotwire, abordando
-              el desarrollo frontend desde una perspectiva
-              orientada tanto a la implementación como
-              a la experiencia de usuario.
-            </p>
+            <div className="case-modal__stats">
+              <div>
+                <strong>109</strong>
+                <span>Tickets finalizados · FirmaYa</span>
+              </div>
+
+              <div>
+                <strong>102</strong>
+                <span>Tickets finalizados · Colbún</span>
+              </div>
+            </div>
+
+            <div className="case-modal__contributions">
+              <p>
+                <strong>
+                  Desarrollo y evolución de producto.
+                </strong>{" "}
+                Participación en la implementación de nuevas
+                interfaces, desarrollo de flujos interactivos,
+                mantenimiento de funcionalidades y resolución
+                de incidencias en aplicaciones Ruby on Rails,
+                complementada con propuestas UX/UI
+                documentadas para mejorar la experiencia
+                de usuario.
+              </p>
+            </div>
           </div>
         </section>
 
