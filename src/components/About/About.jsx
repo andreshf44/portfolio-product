@@ -62,7 +62,7 @@ function About() {
             <h2>
               Desarrollo interfaces,
               <br />
-              pero pienso en <span>producto.</span>
+              pero pienso en <span>producto</span>
             </h2>
 
             <p>

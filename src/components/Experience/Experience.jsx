@@ -76,7 +76,7 @@ function Experience() {
             <h2>
               Experiencia construyendo
               <br/>
-              <span> productos digitales.</span>
+              <span> productos digitales</span>
             </h2>
 
             <p>

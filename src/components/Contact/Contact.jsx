@@ -36,7 +36,7 @@ function Contact() {
             <h2>
               Construyamos algo
               <br />
-              que valga la pena <span>usar.</span>
+              que valga la pena <span>usar</span>
             </h2>
 
             <p>
