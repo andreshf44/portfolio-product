@@ -1,23 +1,28 @@
 import { motion } from "framer-motion";
 import "./About.css";
 
+
 const principles = [
   {
     id: "01",
+    category: "Pensamiento de producto",
     title: "Pienso en sistemas",
-    text: "No diseño pantallas aisladas. Busco entender cómo cada decisión afecta al producto completo, sus estados, usuarios y flujos.",
+    text: "No desarrollo pantallas de manera aislada. Busco comprender cómo se relacionan los componentes, los estados y los flujos para construir experiencias coherentes dentro de un producto.",
   },
   {
     id: "02",
+    category: "Criterio de diseño",
     title: "Construyo con intención",
-    text: "Cada interacción, componente y animación debe tener una razón. La interfaz no adorna: ayuda a entender y usar mejor el producto.",
+    text: "Cada decisión de diseño e implementación tiene un propósito. Priorizo la claridad, la accesibilidad y las interacciones que ayudan a las personas a comprender y utilizar mejor el producto.",
   },
   {
     id: "03",
-    title: "Trabajo entre diseño y código",
-    text: "Me interesa ese espacio donde UX, producto y frontend se encuentran. Ahí es donde puedo aportar más valor.",
+    category: "Perfil interdisciplinario",
+    title: "Conecto diseño y código",
+    text: "Trabajo entre la experiencia de usuario y el desarrollo frontend, transformando necesidades de producto en interfaces funcionales, cuidadas y técnicamente sostenibles.",
   },
 ];
+
 
 const education = [
   {
@@ -66,10 +71,11 @@ function About() {
             </h2>
 
             <p>
-              Soy Front-end Developer y me interesa construir experiencias
-              digitales claras, útiles y cuidadas. Mi trabajo vive entre la
-              lógica del producto, la experiencia de usuario y la
-              implementación técnica.
+            Soy Front-end Developer e Ingeniero en Informática y Gestión. 
+            Me interesa construir productos digitales que combinen funcionalidad, 
+            claridad y una experiencia de usuario bien pensada. Mi trabajo conecta 
+            el desarrollo técnico con el diseño de interfaces y la comprensión de las necesidades 
+            reales de las personas.
             </p>
           </motion.div>
 
@@ -93,12 +99,12 @@ function About() {
 
             <div className="about__profile-row">
               <span>Focus</span>
-              <strong>Product Interfaces</strong>
+              <strong>Product Design & Development</strong>
             </div>
 
             <div className="about__profile-row">
               <span>Stack</span>
-              <strong>Ruby on Rails · React · Next.js · JavaScript</strong>
+              <strong>React · Next.js · Rails · JavaScript</strong>
             </div>
 
             <div className="about__profile-row">
@@ -108,6 +114,7 @@ function About() {
           </motion.aside>
         </div>
 
+        
         <div className="about__principles">
           {principles.map((principle, index) => (
             <motion.article
@@ -121,9 +128,15 @@ function About() {
                 delay: index * 0.08,
               }}
             >
-              <span className="about__principle-index">
-                {principle.id}
-              </span>
+              <div className="about__principle-heading">
+                <span className="about__principle-index">
+                  {principle.id}
+                </span>
+
+                <span className="about__principle-category">
+                  {principle.category}
+                </span>
+              </div>
 
               <h3>{principle.title}</h3>
 
@@ -131,6 +144,7 @@ function About() {
             </motion.article>
           ))}
         </div>
+
 
         <motion.div
           className="about__career"
@@ -170,8 +184,7 @@ function About() {
             </span>
 
             <p>
-              Experiencia profesional, formación y stack técnico
-              reunidos en un documento resumido.
+              Mi experiencia, formación y conocimientos técnicos reunidos en un solo documento.
             </p>
 
             <a
@@ -180,7 +193,7 @@ function About() {
               rel="noopener noreferrer"
               className="about__cv-link"
             >
-              <span>Ver CV</span>
+              <span>Ver currículum</span>
               <span aria-hidden="true">↗</span>
             </a>
           </div>

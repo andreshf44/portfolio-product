@@ -40,16 +40,15 @@ function Contact() {
             </h2>
 
             <p>
-              Si estás construyendo un producto digital y necesitas alguien
-              que pueda moverse entre interfaz, producto y desarrollo
-              frontend, conversemos.
+              Si estás construyendo un producto digital y buscas a alguien que conecte diseño, 
+              experiencia de usuario y desarrollo frontend, conversemos.
             </p>
 
             <a
               className="contact__mail"
-              href="mailto:andreshf@live.cl"
+              href="/andres-herrera-cv.pdf"
             >
-              <span>andreshf@live.cl</span>
+              <span>Ver currículum</span>
               <span aria-hidden="true">↗</span>
             </a>
           </motion.div>

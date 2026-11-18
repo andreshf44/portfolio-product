@@ -17,7 +17,7 @@ const projects = [
     company: "BeTrust",
     title: "Firma electrónica y gestión documental",
     description:
-      "Desarrollo frontend en aplicaciones Ruby on Rails, implementando interfaces responsive, flujos multipaso con Turbo Frames y funcionalidades interactivas con JavaScript. Participación en la evolución técnica y visual de FirmaYa2 y Colbún.",
+      "Desarrollo frontend de productos digitales con Ruby on Rails, Hotwire y JavaScript. Implementación de interfaces y flujos interactivos, evolución de componentes y estilos reutilizables, y participación en el rediseño UX/UI de FirmaYa2 y Colbún.",
     tags: [
       "Web App",
       "Ruby on Rails",
@@ -37,7 +37,7 @@ const projects = [
     company: "Von Riegen Arquitectos",
     title: "Arquitectura y presencia digital",
     description:
-      "Diseño y desarrollo de una plataforma web para un estudio de arquitectura en Pucón, enfocada en presentar sus servicios y proyectos mediante una experiencia visual minimalista, responsive y funcional. Implementación de un formulario de contacto integrado con servicios backend para gestionar consultas de potenciales clientes.",
+      "Diseño y desarrollo de una plataforma web para un estudio de arquitectura en Pucón, construida con React y Vite. Implementación de una experiencia visual minimalista y responsive, con componentes reutilizables, presentación de servicios y proyectos, e integración de un formulario de contacto mediante una API serverless.",
     tags: [
       "React",
       "JavaScript",
@@ -57,7 +57,7 @@ const projects = [
     company: "Haiku",
     title: "Experiencia digital para alojamientos",
     description:
-      "Diseño y desarrollo de una plataforma web para un proyecto de hospedaje boutique, enfocada en descubrir alojamientos, explorar experiencias y facilitar el proceso de reserva mediante una interfaz inmersiva, responsive y bilingüe.",
+      "Diseño y desarrollo de una plataforma web para un proyecto de hospedaje boutique, construida con Next.js, React y TypeScript. Creación de una experiencia visual inmersiva, responsive y bilingüe que permite descubrir alojamientos, explorar experiencias y acceder al proceso de reserva mediante una navegación clara e intuitiva.",
     tags: [
       "Next.js",
       "React",
@@ -77,7 +77,7 @@ const projects = [
     company: "Go Fly Fishing",
     title: "Plataforma web para turismo de pesca",
     description:
-      "Diseño y desarrollo de una plataforma web bilingüe para una empresa de pesca con mosca en Pucón, enfocada en presentar experiencias, optimizar la visibilidad online y facilitar el contacto con clientes nacionales e internacionales.",
+      "Diseño y desarrollo de un sitio web bilingüe para una empresa de pesca con mosca en Pucón, utilizando Wix y Velo. Construcción de una experiencia responsive orientada a presentar servicios y experiencias, facilitar el contacto con clientes nacionales e internacionales y fortalecer la presencia digital del negocio.",
     tags: [
       "Wix",
       "Responsive UI",
@@ -97,7 +97,7 @@ const projects = [
     company: "Weghaus",
     title: "Configurador interactivo de productos",
     description:
-      "Desarrollo de funcionalidades frontend para un configurador de productos, implementando selección dinámica de opciones, manejo de estados, actualización de imágenes en tiempo real, persistencia de configuraciones e integración con formularios.",
+      "Desarrollo de un configurador interactivo de productos con JavaScript, implementando selección dinámica de opciones, gestión del estado de la configuración y actualización de imágenes según las decisiones del usuario. Integración de funcionalidades para guardar selecciones, visualizar un resumen del producto configurado y conectar la experiencia con formularios de contacto.",
     tags: [
       "JavaScript",
       "State Management",
@@ -117,14 +117,13 @@ const projects = [
     company: "Tacto Sur",
     title: "Plataforma cultural para artes escénicas",
     description:
-      "Diseño y desarrollo de una plataforma web para una organización de artes escénicas, implementando una experiencia responsive, gestión de contenido e integración con Mercado Pago para el proceso de suscripción.",
+      "Diseño y desarrollo de una plataforma web para una organización de artes escénicas, construida con React y JavaScript. Implementación de interfaces responsive, organización de contenidos culturales e integración con Mercado Pago para facilitar el proceso de suscripción a la plataforma.",
     tags: [
       "React",
       "UX/UI",
       "Responsive UI",
       "Mercado Pago",
       "JavaScript",
-      "Web Design",
     ],
     type: "Cultural Platform",
     year: "2025",

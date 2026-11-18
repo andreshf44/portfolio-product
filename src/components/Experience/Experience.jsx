@@ -4,27 +4,27 @@ import "./Experience.css";
 const experience = [
   {
     year: "2024 — Actualidad",
-    company: "BPO Advisors",
+    company: "BeTrust",
     role: "Front-end Developer",
     description:
-      "Desarrollo y evolución de aplicaciones web orientadas a procesos de firma, gestión documental, administración de usuarios y flujos de producto.",
-    tags: ["React", "JavaScript", "Ruby on Rails", "UI Systems"],
+      "Desarrollo y evolución de interfaces para FirmaYa2 y Colbún, implementando vistas y flujos interactivos con Ruby on Rails, Hotwire y JavaScript. Trabajo en adaptación responsive, mantenimiento de funcionalidades y propuestas UX/UI orientadas a mejorar la claridad, accesibilidad y experiencia de usuario.",
+    tags: ["Ruby on Rails", "Hotwire", "JavaScript", "HTML / CSS", "UX/UI"],
   },
   {
     year: "2023 — 2024",
     company: "WebClass",
     role: "Front-end Developer",
     description:
-      "Desarrollo de interfaces y soluciones web con foco en experiencia de usuario, implementación visual y mantenimiento de producto.",
-    tags: ["React", "JavaScript", "Responsive UI"],
+      "Desarrollo y mantenimiento de interfaces para plataformas educativas, implementando componentes y funcionalidades con Vue.js, JavaScript, HTML y CSS. Adaptación responsive de vistas, integración con aplicaciones existentes y mejoras orientadas a la usabilidad y experiencia de usuario.",
+    tags: ["Vue.js", "JavaScript", "HTML / CSS", "Responsive UI", "PHP"],
   },
   {
     year: "2023",
     company: "Banco Itaú",
     role: "Práctica profesional",
     description:
-      "Participación en desarrollo frontend dentro de un entorno corporativo y multidisciplinario.",
-    tags: ["Frontend", "Producto digital", "Trabajo en equipo"],
+      "Procesamiento y análisis de información mediante Excel y Power BI, realizando tareas de extracción, limpieza y transformación de datos para la elaboración de reportes. Uso de macros en Excel para automatizar tareas y apoyar la generación de informes.",
+    tags: ["Excel", "Power BI", "ETL", "Macros", "Data Reporting"],
   },
 ];
 
@@ -74,14 +74,14 @@ function Experience() {
 
           <div className="experience__heading">
             <h2>
-              Experiencia construyendo
+              Mi recorrido en el desarrollo de
               <br/>
               <span> productos digitales</span>
             </h2>
 
             <p>
-              Mi recorrido combina desarrollo frontend, producto, interfaz y
-              trabajo dentro de equipos reales.
+            Mi experiencia integra desarrollo frontend, diseño de interfaces 
+            y evolución de productos digitales, colaborando con equipos y resolviendo necesidades reales.
             </p>
           </div>
         </motion.header>
