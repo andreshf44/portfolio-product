@@ -146,8 +146,8 @@
   
   .case-modal__stats {
     display: flex;
-    flex-wrap: wrap;
-    gap: 36px;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
   }
   
   .case-modal__stats > div {
@@ -235,12 +235,6 @@
   
     .case-modal__section p {
       font-size: 16px;
-    }
-  
-    .case-modal__stats {
-      gap: 24px;
-      flex-wrap: nowrap;
-      margin-bottom: 25px;
     }
   
     .case-modal__footer {

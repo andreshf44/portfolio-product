@@ -7,24 +7,24 @@ import "./BeTrustCaseModal.css";
 const contributions = {
   firmaya: [
     {
-      title: "Vistas integradas en Ruby on Rails.",
+      title: "Desarrollo de interfaces en Ruby on Rails.",
       description:
-        "Construcción y organización de vistas HTML y estilos CSS dentro de la aplicación, implementando nuevos diseños y ajustando la estructura de las interfaces a los flujos del producto.",
+        "Implementación y mantenimiento de vistas mediante HTML, CSS y componentes ERB, integrando nuevos diseños en la estructura existente de la aplicación y adaptándolos a los distintos flujos del producto.",
     },
     {
-      title: "Flujos multipaso con Turbo Frames.",
+      title: "Flujos interactivos con Hotwire y JavaScript.",
       description:
-        "Implementación de etapas del proceso de firma electrónica mediante actualizaciones parciales de la interfaz, sin recargar la página completa. El contenido del contenedor cambia al avanzar desde la carga de documentos hacia la incorporación de firmantes.",
+        "Desarrollo de procesos multipaso con Turbo Frames, permitiendo actualizar secciones de la interfaz sin recargar la página completa. Implementación de comportamientos interactivos como modales, paneles desplegables y respuestas a eventos del usuario.",
     },
     {
-      title: "Interacciones con JavaScript.",
+      title: "Evolución del sistema visual y reutilización de componentes.",
       description:
-        "Desarrollo de comportamientos de interfaz como apertura y cierre de modales, expansión de paneles de contenido y respuesta a eventos del usuario.",
+        "Análisis de la estructura frontend existente para identificar componentes, tokens y clases CSS reutilizables. Trabajo de normalización de estilos compartidos, revisión de sobrescrituras y separación de responsabilidades entre componentes generales y estilos específicos de cada vista.",
     },
     {
-      title: "Implementación responsive y evolución de vistas.",
+      title: "Implementación progresiva del rediseño.",
       description:
-        "Adaptación de interfaces para escritorio y dispositivos móviles, implementación de diseños aprobados, corrección de incidencias y mantenimiento de funcionalidades existentes.",
+        "Organización de la evolución visual del producto en cinco flujos: Acceso y cuenta, Inicio, Mi cuenta, Documentos y Firma. Trabajo sobre las vistas de acceso, inicio y navegación, integrando las nuevas propuestas de diseño de manera gradual y procurando conservar la funcionalidad, el comportamiento responsive y la compatibilidad con la aplicación existente.",
     },
   ],
 
@@ -48,19 +48,19 @@ const contributions = {
 
   design: [
     {
-      title: "Análisis de flujos e interfaces.",
+      title: "Diagnóstico de experiencia y arquitectura visual.",
       description:
-        "Revisión de recorridos de usuario para identificar oportunidades de mejora en jerarquía visual, navegación, claridad y accesibilidad.",
+        "Análisis de interfaces, navegación y recorridos de usuario para identificar oportunidades de mejora en jerarquía visual, claridad, accesibilidad y consistencia entre vistas.",
     },
     {
-      title: "Propuesta de rediseño del acceso a FirmaYa2.",
+      title: "Diseño de nuevas experiencias.",
       description:
-        "Diseño de una experiencia de ingreso con mayor claridad en las acciones, señales de confianza y adaptación responsive; trabajo de diseño diferenciado de las funcionalidades ya implementadas.",
+        "Desarrollo de propuestas de rediseño para el acceso, inicio y navegación de FirmaYa2, buscando facilitar la comprensión de las acciones, fortalecer las señales de confianza y construir una experiencia más cercana, clara y coherente.",
     },
     {
-      title: "Documentación del sistema de diseño.",
+      title: "Sistema de diseño y documentación.",
       description:
-        "Elaboración de un Design Book con criterios de cercanía, confianza, claridad, accesibilidad y calma para orientar y documentar la evolución de las interfaces.",
+        "Elaboración de un Design Book basado en cinco principios: cercanía, confianza, claridad, accesibilidad y calma. Definición de criterios visuales y de interacción que orientan la evolución del producto y su implementación progresiva mediante componentes y estilos reutilizables.",
     },
   ],
 };
@@ -194,7 +194,7 @@ function BeTrustCaseModal({ onClose }) {
         >
           Experiencia construyendo
           <br />
-          <span>productos digitales.</span>
+          <span>productos digitales</span>
         </h2>
 
         <div className="case-modal__metadata">
@@ -267,7 +267,7 @@ function BeTrustCaseModal({ onClose }) {
           <ContributionList items={contributions.design} />
         </section>
 
-        {/* 05 — CONTRIBUCIÓN Y RESULTADOS */}
+        {/* 05 — CONTRIBUCIÓN EN CIFRAS */}
 
         <section className="case-modal__section">
           <span className="case-modal__section-label">
@@ -292,13 +292,15 @@ function BeTrustCaseModal({ onClose }) {
                 <strong>
                   Desarrollo y evolución de producto.
                 </strong>{" "}
-                Participación en la implementación de nuevas
-                interfaces, desarrollo de flujos interactivos,
-                mantenimiento de funcionalidades y resolución
-                de incidencias en aplicaciones Ruby on Rails,
-                complementada con propuestas UX/UI
-                documentadas para mejorar la experiencia
-                de usuario.
+                Mi experiencia en BeTrust combina
+                implementación técnica, mantenimiento
+                de aplicaciones existentes y evolución
+                de interfaces con una mirada de producto.
+                Este trabajo me ha permitido profundizar
+                en la construcción de soluciones frontend
+                que buscan equilibrar funcionalidad,
+                experiencia de usuario y mantenibilidad
+                del código.
               </p>
             </div>
           </div>
