@@ -61,7 +61,6 @@ The portfolio includes projects developed in professional and independent contex
 - **BeTrust / FirmaYa2** — Electronic signature and document management interfaces
 - **Haiku** — Digital experience for boutique accommodations
 - **Go Fly Fishing** — Website for fishing tourism
-- **Weghaus** — Interactive product configurator
 - **Tacto Sur** — Digital platform for performing arts
 - **Von Riegen Arquitectos** — Architecture studio website
 - **iED Global** — Educational platform interfaces
