@@ -63,7 +63,6 @@ The portfolio includes projects developed in professional and independent contex
 - **Go Fly Fishing** — Website for fishing tourism
 - **Tacto Sur** — Digital platform for performing arts
 - **Von Riegen Arquitectos** — Architecture studio website
-- **iED Global** — Educational platform interfaces
 
 Project descriptions and links are available on the live portfolio.
 
