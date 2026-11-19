@@ -5,7 +5,6 @@ import BeTrustCaseModal from "../CaseModal/BeTrustCaseModal";
 import VonRiegenImg from "../../assets/images/projects/von-riegen.png";
 import haikuImg from "../../assets/images/projects/haiku.png";
 import goFlyImg from "../../assets/images/projects/go-fly-fishing.png";
-import weghausImg from "../../assets/images/projects/weghaus.png";
 import iedImg from "../../assets/images/projects/ied.png"
 import tactoSurImg from "../../assets/images/projects/tacto-sur.png"
 
@@ -94,26 +93,6 @@ const projects = [
   },
   {
     id: "05",
-    company: "Weghaus",
-    title: "Configurador interactivo de productos",
-    description:
-      "Desarrollo de un configurador interactivo de productos con JavaScript, implementando selección dinámica de opciones, gestión del estado de la configuración y actualización de imágenes según las decisiones del usuario. Integración de funcionalidades para guardar selecciones, visualizar un resumen del producto configurado y conectar la experiencia con formularios de contacto.",
-    tags: [
-      "JavaScript",
-      "State Management",
-      "Dynamic UI",
-      "Forms",
-      "Wix",
-      "Responsive UI",
-    ],
-    type: "Product Configurator",
-    year: "2026",
-    role: "Front-end Developer",
-    url: "https://www.weghaus.cl/",
-    image: weghausImg,
-  },
-  {
-    id: "06",
     company: "Tacto Sur",
     title: "Plataforma cultural para artes escénicas",
     description:
@@ -132,7 +111,7 @@ const projects = [
     image: tactoSurImg,
   },
   {
-    id: "07",
+    id: "06",
     company: "iED Global",
     title: "Plataforma digital para educación",
     description:
