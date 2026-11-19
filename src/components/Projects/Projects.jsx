@@ -5,7 +5,6 @@ import BeTrustCaseModal from "../CaseModal/BeTrustCaseModal";
 import VonRiegenImg from "../../assets/images/projects/von-riegen.png";
 import haikuImg from "../../assets/images/projects/haiku.png";
 import goFlyImg from "../../assets/images/projects/go-fly-fishing.png";
-import iedImg from "../../assets/images/projects/ied.png"
 import tactoSurImg from "../../assets/images/projects/tacto-sur.png"
 
 import "./Projects.css";
@@ -109,26 +108,6 @@ const projects = [
     role: "Design & Front-end Developer",
     url: "https://tactosur.com/",
     image: tactoSurImg,
-  },
-  {
-    id: "06",
-    company: "iED Global",
-    title: "Plataforma digital para educación",
-    description:
-      "Implementación frontend en React a partir de un diseño existente, desarrollando funcionalidades, flujos de navegación e interacción para garantizar una experiencia consistente y el correcto funcionamiento de la plataforma.",
-    tags: [
-      "React",
-      "JavaScript",
-      "Front-end",
-      "Responsive UI",
-      "EdTech",
-      "UI Implementation",
-    ],
-    type: "EdTech Platform",
-    year: "2025",
-    role: "Front-end Developer",
-    url: "https://i-edglobal.com/",
-    image: iedImg,
   },
 ];
 
